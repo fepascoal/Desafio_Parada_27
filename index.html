@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Desafio - Parada 27</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/estilo.css">
+        <script src="js/jquery-3.7.0.js"></script>
+        <script src="js/jquery.mask.js"></script>
+        <script src="js/viacep.js"></script>
+        <script src="js/mascara.js"></script>
+        <script src="js/validacao.js" defer></script>
+        <script src="js/password.js" defer></script>
+    </head>
+
+    <body>     
+        <div id="main">
+            <div id="container">
+                <h2>Crie sua conta!</h2>
+                <form id="form">
+                    <div class="f_line">
+                        <span>
+                            <label>Nome:</label>
+                            <input type="text" id="i_nome" data-rules="required|min=2|nome">
+                        </span>
+    
+                        <span>
+                            <label>Sobrenome:</label>
+                            <input type="text" id="i_sobrenome" data-rules="required|min=2|sobrenome">
+                        </span>
+                    </div>
+    
+                    <div class="f_line">
+                        <span>
+                            <label>E-mail:</label>
+                            <input type="text" id="i_email" data-rules="required|email">
+                        </span>
+    
+                        <span>
+                            <label>CEP:</label>
+                            <input type="text" id="i_cep" onblur="pesquisa_cep(this.value)" data-rules="required">
+                        </span>
+                    </div>
+    
+                    <div class="f_line">
+                        <span>
+                            <label>Rua:</label>
+                            <input type="text" id="i_rua" data-rules="required">
+                        </span>
+                        
+                        <span>
+                            <label>Bairro:</label>
+                            <input type="text" id="i_bairro" data-rules="required">
+                        </span>
+                    </div>
+    
+                    <div class="f_line">
+                        <span>
+                            <label>Cidade:</label>
+                            <input type="text" id="i_cidade" data-rules="required">
+                        </span>
+                        
+                        <span>
+                            <label>Estado:</label>
+                            <input type="text" id="i_estado" data-rules="required">
+                        </span>
+                    </div>
+                
+                    <div class="f_line">
+                        <span>
+                            <label>Senha:</label>
+                            <input type="password" id="i_senha" data-rules="required|min=6">
+                            <div onclick="show_password_01()" class="eyes"></div> 
+                        </span>
+    
+                        <span>
+                            <label>Confirmar senha:</label>
+                                <input type="password" id="i_confirmaSenha" data-rules="required|min=6">
+                        </span>
+                    </div>
+
+                    <input type="checkbox" id="i_check" onclick="show_password()">
+                    <label for="i_check">Mostrar Senha</label>
+
+                    <div class="f_line">
+                        <span>
+                            <input type="submit" value="Cadastrar" id="btt">
+                        </span>                     
+                    </div>
+                </form>        
+                
+                <div class="ilustration">
+                    <img src="img/ilustration.png">
+                </div>
+            </div>  
+        </div>       
+    </body>
+</html>
